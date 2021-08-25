@@ -1,3 +1,4 @@
+<?php require_once("sendmail.php") ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -57,34 +58,42 @@
 
     <section id="formulaire-contact">
         <div class="container">
-            <form>
                 <fieldset>
+              <form action="contact.php" method="POST">
                     <h1 id="titre-contact">Contact</h1>
                 <div class="form-group row">
+
+                <?php
+if (!empty($errors)) {
+   $allErrors = join('<br/>', $errors);
+   $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
+}
+?>
                     <label for="inlineFormInputName" class="col-sm-2 col-form-label">Nom:</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inlineFormInputName">
+                      <input type="text" class="form-control" required name="name" id="inlineFormInputName">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="phone" class="col-sm-2 col-form-label">Tél:</label>
                     <div class="col-sm-10">
-                      <input type="tel" class="form-control" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                      <input type="text" class="form-control" required name="tel" id="phone" pattern="[0-9]{10}">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputEmail4" class="col-sm-2 col-form-label">Email:</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail4">
+                        <input type="email" class="form-control" required name="email" id="inputEmail4">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Commentaires:</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    <label for="exampleFormControlTextarea1">Message:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="5"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary bouton-envoyer">Envoyer</button>
+                <input type="submit" name="submit" class="btn btn-primary" value="Submit" />
+                </form>
                 </fieldset>
-            </form>
+
         </div>
         <div class="container">
             <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
