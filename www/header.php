@@ -66,6 +66,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
                     </li>    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ciao</a>
+                    </li>
                 </ul>
                 <button type="button" class="btn btn-info btn-round" data-toggle="modal" data-target="#loginModal">
                 Login
