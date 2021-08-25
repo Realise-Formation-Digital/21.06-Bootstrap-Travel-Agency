@@ -37,15 +37,15 @@
                   <label class="form-label" for="form3Example1cg">Your Name</label>
                 </div>
                 <div class="form-outline mb-4">
-                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                  <input type="email" name="mail" id="form3Example3cg" class="form-control form-control-lg" />
                   <label class="form-label" for="form3Example3cg">Your Email</label>
                 </div>
                 <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                  <input type="password" name="password" id="form3Example4cg" class="form-control form-control-lg" />
                   <label class="form-label" for="form3Example4cg">Password</label>
                 </div>
                 <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
+                  <input type="password" name="rpassword" id="form3Example4cdg" class="form-control form-control-lg" />
                   <label class="form-label" for="form3Example4cdg">Repeat your password</label>
                 </div>
                 <div class="form-check d-flex justify-content-center mb-5">
@@ -60,7 +60,7 @@
                   </label>
                 </div>
                 <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                  <button type="submit" name="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
                 </div>
                 <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!" class="fw-bold text-body"><u>Login here</u></a></p>
               </form>
