@@ -2,36 +2,32 @@
 <?php include_once("headerrr.php"); ?>
     <section id="formulaire-contact">
         <div class="container">
-                <fieldset>
+        <fieldset>
               <form action="contact.php" method="POST">
                     <h1 id="titre-contact">Contact</h1>
+                    <p style="color:red;"><?php echo $error ?></p>
+                    <p style="color:green;"><?php echo $confirmation ?></p>
                 <div class="form-group row">
 
-                <?php
-if (!empty($errors)) {
-   $allErrors = join('<br/>', $errors);
-   $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
-}
-?>
-                    <label for="inlineFormInputName" class="col-sm-2 col-form-label">Nom:</label>
+                    <label for="inlineFormInputName" class="col-sm-2 col-form-label">Nom *:</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" required name="name" id="inlineFormInputName">
+                      <input type="text" class="form-control" name="name" id="inlineFormInputName">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="phone" class="col-sm-2 col-form-label">Tél:</label>
+                    <label for="phone" class="col-sm-2 col-form-label">Tél *:</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" required name="tel" id="phone" pattern="[0-9]{10}">
+                      <input type="text" class="form-control" name="tel" id="phone" pattern="[0-9]{10}">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputEmail4" class="col-sm-2 col-form-label">Email:</label>
+                    <label for="inputEmail4" class="col-sm-2 col-form-label">Email *:</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" required name="email" id="inputEmail4">
+                        <input type="email" class="form-control" name="email" id="inputEmail4">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Message:</label>
+                    <label for="exampleFormControlTextarea1">Message *:</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="5"></textarea>
                 </div>
                 <input type="submit" name="submit" class="btn btn-primary" value="Submit" />
