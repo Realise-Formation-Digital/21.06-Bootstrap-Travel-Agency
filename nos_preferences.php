@@ -1,47 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Nos coups de coeurs">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="style-copie.css">
-    <!-- <link href="./src/style.css" rel="stylesheet" /> -->
-    <title> Web Développeur </title>
-  </head>
-  
-  <header class="bg-light">
-    <!-- Bannière réduction -->
-    <div class="banner alert-info text-white p-1" style="text-align: center; background-color: #344764;"><i class="icon-gift icon-white"></i>Utilisez le code COVID et bénéficiez de -15% sur TOUS les voyages ! </div>
-    <!-- Barre de navigation avec logo -->
-    <div class="container">
-    <nav class="navbar navbar-light navbar-expand-lg">
-        <div class="row">
-            <a href="index.html" class="navbar-brand">
-                <img src="assets/img/logo-fleur.png" alt="Edelweiss" class="float-left logo-fleur mr-2">
-                <p class="align-middle"><h1><span style="color:rgb(194, 31, 31);">local</span> <span style="color:rgb(223, 84, 84)">taste</span></h1></p>
-            </a>
-        </div>
-        <button class="navbar-toggler" data-toggle="collapse" data-target=#navbarCollapse><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-                <li>
-                    <a href="index.html" class="nav-link">Accueil</a>
-                </li>
-                <li>
-                    <a href="nos_preferences.html" class="nav-link">Nos coups de coeur</a>
-                </li>
-                <li>
-                    <a href="notre-entreprise.html" class="nav-link">Notre entreprise</a>
-                </li>
-                <li>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-        </div>
-     </nav>   
-    </div>
-  </header>
-
+<?php include_once("headerrr.php"); ?>
   <body>
     <section>
       </br>
