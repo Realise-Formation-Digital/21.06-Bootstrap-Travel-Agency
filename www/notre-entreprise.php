@@ -1,11 +1,7 @@
 <?php include_once("headerrr.php"); ?>
 
 <body>
-
     <!--Section Hero -->
-
-
-
     <div class="container">
         <div class="jumbotron">
             <h1 class="display-4 text-center">Local Taste</h1>
@@ -81,8 +77,5 @@
             </div>
         </div>
     </div>
-
-
-
 </body>
 <?php include_once ("footerrr.php"); ?>
