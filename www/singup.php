@@ -26,7 +26,7 @@
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Create an account</h2>
-              <form action="scriptsingup.php" method="post">
+              <form action="singup.php" method="post">
                 <p style="color:red;"><?php echo $error ?></p>
                 <p style="color:green;"><?php echo $confirmation ?></p>
                 <div class="form-outline mb-4">
