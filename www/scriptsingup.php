@@ -9,6 +9,16 @@
      $password = $_POST['password'];
      $rpassword = $_POST['rpassword'];
      $hashedpassword = md5($password);
+
+     if (empty($nom) || empty($mail) || empty($password) || empty($rpassword)) {
+        
+      $error = 'Merci de remplire tous les champs';
+      //return true;
+      } else {
+
+          $confirmation = " " . $nom . ", merci";
+      }
+
      // afficher le résultat
      echo '<h3>Informations récupérées en utilisant POST</h3>'; 
      echo 'Nom : ' . $nom . ' Mail : ' . $mail . ' Password : ' . md5($password) . ' Rpassword : ' . md5($rpassword); 
