@@ -1,7 +1,16 @@
+<?php include_once "validation_header.php";
+      //include_once "logout.php";
+ ?>
+
 <!doctype html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
+
+        .price-tag {
+            color: #E53C3A;
+            font-weight: 600;
+        }
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
@@ -9,14 +18,12 @@
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style-copie.css">
-    <link rel="stylesheet" href="assets/css/style-copie.css">
-    <title>Local Taste</title>
-
-    <!--CSS Integrer-->
     <style>
+
+.price-tag {
+    color: #E53C3A;
+    font-weight: 600;
+}
         body {
             font-family: 'Nunito', sans-serif;
             background: rgb(194, 222, 255)
@@ -161,14 +168,14 @@
                                 <h4>Login</h4>
                               </div>
                               <div class="d-flex flex-column text-center">
-                                <form>
+                                <form method="post" action="index.php">
                                   <div class="form-group">
-                                    <input type="email" class="form-control" id="email1"placeholder="Your email address...">
+                                    <input type="email" class="form-control" name="email1"placeholder="Your email address..." id="email">
                                   </div>
                                   <div class="form-group">
-                                    <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                                    <input type="password" class="form-control" name="password1" placeholder="Your password..."id="password">
                                   </div>
-                                  <button type="button" class="btn btn-info btn-block btn-round">Login</button>
+                                  <input type="submit" class="btn btn-info btn-block btn-round" id="login">Login</button> 
                                 </form>
                                 
                                 <div class="text-center text-muted delimiter">or use a social network</div>
@@ -191,8 +198,10 @@
                             </div>
                         </div>
                       </div>
+
             </div>
         </nav>
     </div>
     <hr>
+    <p class="error"><?php echo $error;?></P><p class="success"><?php echo $success;?></P>
 </header>

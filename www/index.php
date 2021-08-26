@@ -1,4 +1,4 @@
-<?php include_once("headerrr.php"); ?>
+<?php require_once("headerrr.php"); ?>
 
 <section class="hero">
     <div class="container-fluid hero-background">
