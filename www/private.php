@@ -2,10 +2,10 @@
 
 
 session_start();
-$_SESSION['username']="FRED";
+//$_SESSION['sitewe6b2']="siteweb";
 
 
-if (!(isset($_SESSION['username']))) {
+if (!(isset($_SESSION['siteweb']))) {
     $errorsession = 'Vous n\'êtes pas connecter, <br> <button type="button" class="btn btn-info btn-round" data-toggle="modal" data-target="#loginModal">
 Login </button>';
 } else {
