@@ -9,8 +9,9 @@
      $password = $_POST['password'];
      $rpassword = $_POST['rpassword'];
      $hashedpassword = md5($password);
+     $hashedrpassword = md5($rpassword);
 
-     if (empty($nom) || empty($mail) || empty($password) || empty($rpassword)) {
+     if (empty($nom) || empty($mail) || empty($hashedpassword) || empty($hashedrpassword)) {
         
       $error = 'Merci de remplire tous les champs';
       //return true;
@@ -21,8 +22,8 @@
 
      // afficher le résultat
      echo '<h3>Informations récupérées en utilisant POST</h3>'; 
-     echo 'Nom : ' . $nom . ' Mail : ' . $mail . ' Password : ' . md5($password) . ' Rpassword : ' . md5($rpassword); 
-       $Content .= "$nom; $mail; $hashedpassword; $rpassword\n";
+     echo 'Nom : ' . $nom . ' Mail : ' . $mail . ' Password : ' . md5($password) . ' Rpassword : ' . md5($hashedrpassword); 
+       $Content .= "$nom; $mail; $hashedpassword; $hashedrpassword\n";
        $FileName = "users.csv";
       file_put_contents($FileName, $Content, FILE_APPEND | LOCK_EX);
      exit;
