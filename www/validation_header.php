@@ -1,7 +1,6 @@
 <?php
 
 
-
 if (isset($_POST['email1']) && isset($_POST['password1'])) {
  
   $password1=$_POST['password1'];
