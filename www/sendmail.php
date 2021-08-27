@@ -11,11 +11,11 @@ if(isset($_POST['submit'])){
 
     if (empty($name) || empty($email) || empty($tel) || empty($message)) {
         
-        $error = 'Merci de remplire tous les champs avec *';
+        $greska = 'Merci de remplire tous les champs avec *';
         //return true;
         } else {
 
-            $confirmation = " " . $name . ", merci pour votre message, nous vous répondrons dans les plus brefs délais";
+            $konfirmacija = " " . $name . ", merci pour votre message, nous vous répondrons dans les plus brefs délais";
         }
 
 
