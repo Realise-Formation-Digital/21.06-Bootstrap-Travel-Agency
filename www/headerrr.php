@@ -202,4 +202,5 @@
     </div>
     <hr>
     <p class="error"><?php echo $error;?></P><p class="success"><?php echo $success;?></P>
+    <p style="color:green;"><?php echo $userexite ?></p>
 </header>
