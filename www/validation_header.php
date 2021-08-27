@@ -44,4 +44,3 @@ if (isset($_POST['email1']) && isset($_POST['password1'])) {
 session_start();
 unset($_SESSION['email']);
 */
->>>>>>> Stashed changes

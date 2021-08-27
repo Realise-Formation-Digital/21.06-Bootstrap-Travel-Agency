@@ -1,16 +1,16 @@
 <?PHP
 
-
+//lancer la session :)
 session_start();
-//$_SESSION['sitewe6b2']="siteweb";
 
-
+//check if session exist 
 if (!(isset($_SESSION['email']))) {
     $errorsession = 'Vous n\'êtes pas connecter, <br> <button type="button" class="btn btn-info btn-round" data-toggle="modal" data-target="#loginModal">
 Login </button>';
 } else {
+
     $edintext = "<html><body><center><table>\n\n";
-  
+  //open file on read mode
     $file = fopen("messages.csv", "r");
     while (($data = fgetcsv($file, 0, ';')) !== false) {
         $edintext .= "<tr>";
@@ -22,7 +22,7 @@ Login </button>';
         
     }
 
-    // Closing the file
+    // Close the file
     fclose($file);
 
     $edintext .= "\n</table></center></body></html>";
@@ -33,7 +33,7 @@ Login </button>';
 
 ?>
 
-
+<!--// include header // !-->
 <?php include_once("headerrr.php"); ?>
 
 <body>
