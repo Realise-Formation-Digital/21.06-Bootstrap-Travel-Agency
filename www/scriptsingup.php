@@ -19,8 +19,6 @@
 
           $confirmation = " " . $nom . ", merci";
      // afficher le résultat
-     //echo '<h3>Informations récupérées en utilisant POST</h3>'; 
-     //echo 'Nom : ' . $nom . ' Mail : ' . $mail . ' Password : ' . md5($password) . ' Rpassword : ' . md5($hashedrpassword); 
        $Content .= "$nom; $mail; $hashedpassword; $hashedrpassword\n";
        $FileName = "users.csv";
       file_put_contents($FileName, $Content, FILE_APPEND | LOCK_EX);
