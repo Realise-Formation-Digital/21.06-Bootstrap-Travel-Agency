@@ -6,6 +6,7 @@ if (isset($_POST['email1']) && isset($_POST['password1'])) {
   $password1=$_POST['password1'];
   $email=$_POST['email1'];
 
+  
   if(empty($email))    {
     $error = "sorry, you must enter your email";
   }
