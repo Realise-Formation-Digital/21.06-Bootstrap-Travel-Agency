@@ -2,11 +2,13 @@
 
 //echo md5('dava1234');
 
-
+/*
 $name = trim($_POST["email"]);
 if (preg_match("/^[a-zA-Z-' ]*$/",$name)) {
- // echo "please try again";
-}
+ echo "please try again";
+
+*/
+
 
 if (isset($_POST['email1']) && isset($_POST['password1'])) {
    // echo ("Dawit");
@@ -17,15 +19,41 @@ if (isset($_POST['email1']) && isset($_POST['password1'])) {
   $password1=$_POST['password1'];
   $email=$_POST['email1'];
 
-    if(empty($email))
-    {
+    if(empty($email))    {
     $error = "sorry, you must enter your email";
-    }
-    elseif (is_numeric($email))
-    {
-    die("sorry, email must containing alphabet");
+    } 
+    if(empty($password1))    {
+      $error = "sorry, you must enter your password";
+      }
+
+
+      // reade file
+      $path = 'users.csv';
+
+if (file_exists($path)) {
+    $contents = file_get_contents($path);
+    $contents = explode("\n", $contents);
+
+    $users = array();
+
+    foreach ($contents as $value) {
+        $user = explode(';', $value);
+        $passs = explode(';', $value);
+        $users[$user[0]] = $user[1];
+        $pass[$passs[2]] = $passs[3];
     }
 
+    if (isset($users[$_POST['email']]) && ($pass[$_POST['password1']])) {
+        // User exists!
+        $userexite = "User existe !!!!!!!!!!!!!!!!";
+    } else {
+      echo "marche pas";
+    }
+}
+
+
+
+/*
     $ok = false;
     $row = 1;
     // Vérifie si le fichier users.csv existe et l'ouvre en mode lecture.
@@ -46,19 +74,12 @@ if (isset($_POST['email1']) && isset($_POST['password1'])) {
       $error = "Fichier users.csv non trouvé";
     }
 
-
+  */
+  
+    
 
     // Ouvrir le fichier users.csv
-    /*
-    $CSVfp = fopen("users.csv", "r");
-    $_rows= count(file("users.csv", "r"))
-    'email1'=>$email1
-    'password1'=>$password1
-    */
 
     // Vérifier dedans
 
 }
-
-    
-    
