@@ -19,7 +19,7 @@
 
           $confirmation = " " . $nom . ", merci";
      // afficher le résultat
-       $Content .= "$nom; $mail; $hashedpassword; $hashedrpassword\n";
+       $Content .= "$mail; $hashedpassword; $hashedrpassword;$nom \n";
        $FileName = "users.csv";
       file_put_contents($FileName, $Content, FILE_APPEND | LOCK_EX);
 
