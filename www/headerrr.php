@@ -150,7 +150,16 @@
 
 
                 <button type="button" class="btn btn-info btn-round" data-toggle="modal" data-target="#loginModal">
-                Login
+                <?PHP
+//check if session exist 
+if (!(isset($_SESSION['email']))) {
+    //$errorsession = 'Login';
+    echo "Login";
+} else {
+  echo "<a href='index.php'>Logout</p>";
+    $errorsession = 'Logout';
+}
+?>
                 </button>
                       
                       <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
