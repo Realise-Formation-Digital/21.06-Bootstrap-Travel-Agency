@@ -2,7 +2,7 @@
 
 //echo md5('dava1234');
 
-print_r($_POST);
+
 $name = trim($_POST["email"]);
 if (preg_match("/^[a-zA-Z-' ]*$/",$name)) {
  // echo "please try again";
@@ -28,11 +28,13 @@ if (isset($_POST['email1']) && isset($_POST['password1'])) {
 
     $ok = false;
     $row = 1;
+    // Vérifie si le fichier users.csv existe et l'ouvre en mode lecture.
     if (($handle = fopen("users.csv", "r")) !== FALSE) {
       while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
         $num = count($data);
         $row++;
         for ($c=0; $c < $num; $c++) {
+          // fichier si l'email et password egal
           $ligneaverifier = $_POST['email1'] . ';' . $_POST['password1'] . ';';
           if ($ligneaverifier == $data[$c]) {
             $ok = true;
@@ -43,8 +45,6 @@ if (isset($_POST['email1']) && isset($_POST['password1'])) {
     } else {
       $error = "Fichier users.csv non trouvé";
     }
-    var_dump ($ok);
-    die('dawit');
 
 
 

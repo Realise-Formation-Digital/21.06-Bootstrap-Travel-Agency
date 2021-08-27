@@ -1,5 +1,5 @@
 <?php include_once "validation_header.php";
-      //include_once "logout.php";
+    //  include_once "logout.php";
  ?>
 
 <!doctype html>
@@ -7,10 +7,6 @@
 <head>
     <!-- Required meta tags -->
 
-        .price-tag {
-            color: #E53C3A;
-            font-weight: 600;
-        }
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
