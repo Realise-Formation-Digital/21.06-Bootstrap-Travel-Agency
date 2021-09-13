@@ -156,7 +156,7 @@ if (!(isset($_SESSION['email']))) {
     //$errorsession = 'Login';
     echo "Login";
 } else {
-  echo "<a href='index.php'>Logout</p>";
+  echo "<a href='./index.php'>Logout</p>";
     $errorsession = 'Logout';
 }
 ?>

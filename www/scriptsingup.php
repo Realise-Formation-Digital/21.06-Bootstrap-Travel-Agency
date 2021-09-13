@@ -11,7 +11,7 @@
      $hashedpassword = md5($password);
      $hashedrpassword = md5($rpassword);
 
-     if (empty($nom) || empty($mail) || empty($password) || empty($rpassword)) {
+     if ((empty($nom) || empty($mail) || empty($password) || empty($rpassword)) && ( $hashedpassword ==  $hashedrpassword)) {
         
       $error = 'Merci de remplire tous les champs';
       //return true;
